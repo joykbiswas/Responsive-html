@@ -1,0 +1,153 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+.main-container{
+    width: 1157px;
+    margin: 0 auto;
+   height: 100vh;
+}
+nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.nav-item{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+    margin:30px;
+    font-size: 19px;
+}
+.nav-item .active{
+    color: red;
+
+}
+.nav-item .btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.nav-item .btn:hover {
+    background-color:#dc3a0d ;
+    color: white;
+}
+/* hero section */
+.hero-container{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+ 
+}
+.hero-container .hero-img{
+    padding: 20px;
+}
+.hero-container .hero-img .hero-ground{
+   background-color:#CECECE;
+   position: absolute;
+   bottom: 85px;
+   
+   width: 360px;
+   height: 100px;
+   height: 100px;
+   border-radius: 50% ; 
+   box-shadow: 0px 6px 15px 4px rgba(0, 0, 0, 0.25);
+   z-index: -100;
+
+}
+.hero-text{
+    margin: 30px;
+    /* width: 280px; */
+}
+.hero-title{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-weight: normal;
+    font-size:55px;
+    line-height: 100%;
+}
+.hero-description{
+    font-size: 18px;
+    padding: 20px 120px 20px 0px;
+}
+.btn-dark{
+    padding: 10px 20px;
+    font-size: 19px;
+    background-color:rgb(3, 2, 33);
+   color: white;
+   border-radius: 10px;
+}
+.btn-dark:hover {
+    color:black;
+    background-color: #CECECE ;
+}
+/* social media */
+.social-icon{
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+}
+.social-icon a{
+    /* padding-right: 40px; */
+    margin:0 23px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 400ms;
+}
+.social-icon a:hover {
+    transform: scale(1.2);
+}
+/* background image */
+.hero-bg-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -200;
+}
+.hero-bg-left{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    z-index:-200;
+}.hero-bg-left img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+/* animations */
+.hero-bg-left img {
+    animation: move-images 1000ms forwards ease-in-out;
+    transform: translateX(-100%);
+}
+@keyframes move-images {
+    to {
+        transform: translateX(0);
+    }
+}
+.hero-text h1, 
+.hero-text p.hero-description,
+.hero-text button.btn-dark {
+    animation: content-text 2000ms forwards ease-in-out;
+    transform: translateY(-80px);
+    opacity: 0;
+}
+@keyframes content-text {
+    50% {
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
